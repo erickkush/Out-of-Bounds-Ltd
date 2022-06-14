@@ -10,19 +10,48 @@ namespace PTSLibrary.DAO
 {
     class CustomerDAO
     {
-        (
-cn.Open();
+
+        public int Authenticate(string username, string password)
+        {
+            string sql;
+            SqlConnection cn;
+            SqlCommand cmd;
+            SqlDataReader dr;
+
+            sql = string.Format("SELECT Customer Id FROM Customer WHERE Username= '(0)' AND Password= '(1)'", username, password);
+            cn = new SqlConnection(Properties.Settings.ConnectionString);
+            cmd = new SqlCommand(sql, cn);
+            int id = 0;
+            try
+            {
+                cn.Open();
+                dr = cmd.ExecuteReader(CommandBehavior.SingleRow);
+                if (dr.Read())
+                {
+                    id = (int)dr["CustomerId"];
+                }
+                dr.Close();
+            }
+            catch (SqlException ex)
+            {
+                throw new Exception("Error Accessing Database", ex);
+            }
+            finally
+            {
+                cn.Close();
+            }
+            return id;
+
+        }
 
 
-dr =cmd.ExecuteReader();
-
-while (dr.Read())
-      (
-         List<Task> tasks=new List<Task>();
-         List<Task> tasks new List<Task>();
-
-         sql = "SELECT" FROM Tank WHERE ProjectId = ' "+ dr["Project Id"].ToString() + " ' ";
-
+        {
+          cn.Open();
+           dr =cmd.ExecuteReader();
+           while (dr.Read())
+      {
+         List<Task> tasks = new List<Task>();
+         sql = "SELECT" FROM Tank WHERE ProjectId = ' "   + dr["Project Id"].ToString() + " ' ";
          cn2= new SqlConnection(Properties.Settings.Default.ConnectionString);
         cmd2 =new SqlCommand(sql, cn2);
 
@@ -32,28 +61,28 @@ while (dr.Read())
 
          while (dr2.Read())
 
-        (
+        {
 
-               Task t=new Task((Guid) dr2 ["TaskId"), dr2["Name"].ToString(), (Status) dr2["StatusId"]);
+               Task t = new Task((Guid)dr2["TaskId"), dr2["Name"].ToString(), (Status)dr2["StatusId"]);
 
         tasks.Add(t);
-           )
-dr2.Close();
+           }
+    dr2.Close();
 
 Project p = new Project(dr["Name").ToString(), (DateTime)dr["ExpectedStartDate"), (DateTime)dr["ExpectedEndDate"), (Guid)dr["Project Id"], tasks);
 
-        projects.Add(p);
-         )
+    projects.Add(p);
+         }
           dr.Close();
-)
+}
 catch (SqlException ex)
-(
-     throw new Exception("Error Getting list", ex);
-)
+{
+    throw new Exception("Error Getting list", ex);
+}
 finally
-(
-      cn.Close():
-)
+{
+    cn.Close();
+        }
 
 
 
