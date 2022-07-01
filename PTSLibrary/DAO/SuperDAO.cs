@@ -40,6 +40,7 @@ namespace PTSLibrary.DAO
             }
             return cust;
         }
+
         public List<Task> GetListOfTasks (Guid projectId)
         {
             string sql;
