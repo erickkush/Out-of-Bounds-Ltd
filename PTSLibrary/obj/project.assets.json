@@ -459,11 +459,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Emmanuel Sane\\Desktop\\1\\erickkush.github.io\\PTSLibrary\\PTSLibrary.csproj",
+      "projectUniqueName": "C:\\Users\\Emmanuel Sane\\Desktop\\PTS PROJECT\\PTSLibrary\\PTSLibrary.csproj",
       "projectName": "PTSLibrary",
-      "projectPath": "C:\\Users\\Emmanuel Sane\\Desktop\\1\\erickkush.github.io\\PTSLibrary\\PTSLibrary.csproj",
+      "projectPath": "C:\\Users\\Emmanuel Sane\\Desktop\\PTS PROJECT\\PTSLibrary\\PTSLibrary.csproj",
       "packagesPath": "C:\\Users\\Emmanuel Sane\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Emmanuel Sane\\Desktop\\1\\erickkush.github.io\\PTSLibrary\\obj\\",
+      "outputPath": "C:\\Users\\Emmanuel Sane\\Desktop\\PTS PROJECT\\PTSLibrary\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Emmanuel Sane\\AppData\\Roaming\\NuGet\\NuGet.Config",
