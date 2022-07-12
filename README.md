@@ -5,7 +5,7 @@
 ## Project Structure (7-Phases)
 
 ### 1.Introduction to Distributed System & Database creation [DONE]
-### 2. Building a business component using C#
+### 2. Building a business component using C# [DONE]
 ### 3. Building an admin GUI using C#
 ### 4. Introduction to .NET remoting (implement a remote server application))
 ### 5. Create a web service and client website
